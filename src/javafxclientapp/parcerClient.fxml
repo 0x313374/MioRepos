@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.web.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="600.0" prefWidth="800.0" VBox.vgrow="ALWAYS" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="javafxclientapp.ParserClientController">
+  <children>
+        <TextField fx:id="urlName" layoutX="77.0" layoutY="50.0" />
+        <Button fx:id="bntSearch" layoutX="258.0" layoutY="50.0" mnemonicParsing="false" onAction="#handleURLSearch" text="Search!" />
+        <WebView fx:id="siteView" layoutX="77.0" layoutY="150.0" prefHeight="400.0" prefWidth="594.0" />
+      <Label layoutX="14.0" layoutY="54.0" text="Parsed URL:" />
+      <Label layoutX="14.0" layoutY="18.0" text="Root URL:" />
+      <Button fx:id="bntSetRoot" layoutX="258.0" layoutY="14.0" mnemonicParsing="false" onAction="#handleURLSetRoot" text="Set as a root" />
+      <TextField fx:id="rootUrlName" layoutX="77.0" layoutY="14.0" />
+      <TableView fx:id="nodesView" layoutX="677.0" layoutY="54.0" prefHeight="164.0" prefWidth="120.0">
+        <columns>
+          <TableColumn prefWidth="133.0" text="Nodes" />
+        </columns>
+      </TableView>
+      <Button fx:id="btnStartParsing" layoutX="708.0" layoutY="232.0" mnemonicParsing="false" onAction="#handleStartParsing" text="Start parsing" />
+  </children>
+</AnchorPane>
